@@ -13,6 +13,11 @@ public class DbInit implements InitializingBean {
     @Autowired
     private UserService userService;
 
+    /**
+     * Explanation : 디비에서 아이디를 조회한후 해당하는 유저가 없으면 생성하면서 권한을 부여한다. <br/>
+     * date : 2021-05-08 오전 12:34
+     * @author : wgPark
+    */
     @Override
     public void afterPropertiesSet() throws Exception {
         if(!userService.findUser("potato").isPresent())

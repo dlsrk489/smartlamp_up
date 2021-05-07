@@ -10,6 +10,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Set;
 
+/**
+ * Explanation : User 클래스로 테이블을 생성하고 Spring Web Security의 UserDetails를 구현해한다. <br/>
+ * date : 2021-05-08 오전 12:38
+ * @author : wgPark
+*/
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

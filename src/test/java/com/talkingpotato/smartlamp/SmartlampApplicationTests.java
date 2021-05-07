@@ -8,6 +8,7 @@ class SmartlampApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
 }

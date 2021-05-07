@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 
+    /**
+     * Explanation : 컨트롤러 연결 data 페이지 <br/>
+     * date : 2021-05-08 오전 12:36
+     * @author : wgPark
+    */
     @GetMapping("/")
     public String data()
     {

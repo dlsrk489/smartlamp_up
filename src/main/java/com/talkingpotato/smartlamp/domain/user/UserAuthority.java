@@ -11,6 +11,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 
+/**
+ * Explanation : 유저별 권한을 매핑해준다 <br/>
+ * date : 2021-05-08 오전 12:37
+ * @author : wgPark
+*/
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

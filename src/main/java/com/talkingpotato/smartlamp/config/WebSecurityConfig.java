@@ -23,17 +23,33 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private DefaultLoginPageGeneratingFilter a;
     private final UserService userService;
 
+    /**
+     * Explanation : 비밀번호 암호화 방식 지정 BCrypt 방식 <br/>
+     * date : 2021-05-08 오전 12:35
+     * @author : wgPark
+    */
     @Bean
     PasswordEncoder passwordEncoder()
     {
         return new BCryptPasswordEncoder();
     }
+
+    /**
+     * Explanation : 보안 형식 지정 <br/>
+     * date : 2021-05-08 오전 12:35
+     * @author : wgPark
+    */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
         auth.userDetailsService(userService);
     }
 
+    /**
+     * Explanation : authorizeRequests anyRequest 들어오는 요청을 전부 허용한다. <br/>
+     * date : 2021-05-08 오전 12:36
+     * @author : wgPark
+    */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
