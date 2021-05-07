@@ -1,0 +1,53 @@
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+#container
+{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction : column;
+}
+
+#top
+{
+    width: 100%;
+    height: 40%;
+    border:1px solid orange;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+#top div img{
+    margin-left: 50px;
+}
+#middle
+{
+    width: 100%;
+    height: 40%;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+#bottom
+{
+    width: 100%;
+    height: 20%;
+    border: 1px solid teal;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.item
+{
+    display: flex;
+    flex-direction :column;
+    align-items: center;
+    justify-content: center;
+    border-style: none solid none none;
+    border-width: 0px 1px 0px 0px;
+
+}

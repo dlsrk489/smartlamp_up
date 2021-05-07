@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>스마트 가로등</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<div id="container">
+    <div id="top">
+        <div>
+            <img src="https://cdn.icon-icons.com/icons2/1541/PNG/512/farola_107292.png" alt="" width="200px"/>
+            <h1>TP 스마트 가로등</h1></div>
+        <div>모든 가로등 정상</div>
+    </div>
+    <div id="middle" sec:authorize="authenticated">
+        <div class="item" id="date"><div>날짜</div><div>2021/05/07 19:00</div></div>
+        <div class="item" id="weather"><div>날씨</div><div>구름 21℃</div></div>
+        <div class="item" id="dust">
+            <div>미세먼지</div>
+            <div>아주좋음 5㎍/m³
+            </div>
+        </div>
+        <div class="item" id="corona">
+            <div>코로나</div>
+            <div>부산진구 10명</div>
+        </div>
+        <div class="item" id="connect">
+            <div>통신상태</div>
+            <div>불량</div>
+        </div>
+        <div class="item" id="cctv" sec:authorize="hasRole('ROLE_ADMIN')">
+            <div>cctv</div>
+            <div>img</div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div sec:authorize="authenticated">
+            <form th:action="@{/logout}" method="post">
+                <button class="btn btn-info" type="submit">  로그아웃 </button>
+            </form>
+        </div>
+        <div sec:authorize="!authenticated">
+            <form th:action="@{/login}" method="post">
+                <button class="btn btn-info" type="submit">  로그인 </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script th:src="@{/js/bootstrap.js}" />
+<script th:src="@{/js/index.js}">
+</script>
+</body>
+</html>
