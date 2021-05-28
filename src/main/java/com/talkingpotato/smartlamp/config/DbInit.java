@@ -1,7 +1,7 @@
 package com.talkingpotato.smartlamp.config;
 
-import com.talkingpotato.smartlamp.domain.user.UserEntity;
-import com.talkingpotato.smartlamp.service.UserService;
+import com.talkingpotato.smartlamp.domains.user.UserEntity;
+import com.talkingpotato.smartlamp.domains.user.service.UserService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,7 +16,7 @@ public class DbInit implements InitializingBean {
     /**
      * Explanation : 디비에서 아이디를 조회한후 해당하는 유저가 없으면 생성하면서 권한을 부여한다. <br/>
      * date : 2021-05-08 오전 12:34
-     * @author : wgPark
+     * @author : yjChoi
     */
     @Override
     public void afterPropertiesSet() throws Exception {

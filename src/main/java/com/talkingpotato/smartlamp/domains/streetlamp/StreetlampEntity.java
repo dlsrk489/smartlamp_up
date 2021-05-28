@@ -1,4 +1,4 @@
-package com.talkingpotato.smartlamp.domain.streetlamp;
+package com.talkingpotato.smartlamp.domains.streetlamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,13 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * Explanation : Jpa를 이용하기위한 엔티티 클래스 <br/>
  * date : 2021-05-08 오전 12:37
- * @author : wgPark
+ * @author : yjChoi
 */
 @Data
 @NoArgsConstructor

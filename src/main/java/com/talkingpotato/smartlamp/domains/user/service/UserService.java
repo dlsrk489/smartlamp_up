@@ -1,8 +1,8 @@
-package com.talkingpotato.smartlamp.service;
+package com.talkingpotato.smartlamp.domains.user.service;
 
-import com.talkingpotato.smartlamp.domain.user.UserAuthority;
-import com.talkingpotato.smartlamp.domain.user.UserEntity;
-import com.talkingpotato.smartlamp.domain.user.repository.UserRepository;
+import com.talkingpotato.smartlamp.domains.user.UserAuthority;
+import com.talkingpotato.smartlamp.domains.user.UserEntity;
+import com.talkingpotato.smartlamp.domains.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,7 +20,7 @@ public class UserService implements UserDetailsService {
     /**
      * Explanation : 유저의 아이디로 디비에 검색을 하고 해당하는 유저가 있으면 유저 객체로 반환해준다. <br/>
      * date : 2021-05-08 오전 12:39
-     * @author : wgPark
+     * @author : yjChoi
      */
     private final UserRepository userRepository;
     @Override
@@ -36,7 +36,7 @@ public class UserService implements UserDetailsService {
     /**
      * Explanation : DB에 유저 저장 <br/>
      * date : 2021-05-08 오전 12:39
-     * @author : wgPark
+     * @author : yjChoi
     */
     public UserEntity save(UserEntity user)
     {
@@ -46,7 +46,7 @@ public class UserService implements UserDetailsService {
     /**
      * Explanation : 유저가 권한을 가지고 있지 않다면 권한을 할당해줌 <br/>
      * date : 2021-05-08 오전 12:39
-     * @author : wgPark
+     * @author : yjChoi
     */
     public void addAuthority(Long userid,String authority)
     {

@@ -1,4 +1,4 @@
-package com.talkingpotato.smartlamp.domain.user;
+package com.talkingpotato.smartlamp.domains.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,7 +14,7 @@ import javax.persistence.IdClass;
 /**
  * Explanation : 유저별 권한을 매핑해준다 <br/>
  * date : 2021-05-08 오전 12:37
- * @author : wgPark
+ * @author : yjChoi
 */
 @Data
 @NoArgsConstructor

@@ -1,6 +1,6 @@
-package com.talkingpotato.smartlamp.domain.user.repository;
+package com.talkingpotato.smartlamp.domains.user.repository;
 
-import com.talkingpotato.smartlamp.domain.user.UserEntity;
+import com.talkingpotato.smartlamp.domains.user.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

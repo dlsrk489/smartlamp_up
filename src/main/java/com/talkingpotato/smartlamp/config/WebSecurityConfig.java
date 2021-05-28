@@ -1,6 +1,6 @@
 package com.talkingpotato.smartlamp.config;
 
-import com.talkingpotato.smartlamp.service.UserService;
+import com.talkingpotato.smartlamp.domains.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +9,6 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.annotation.web.configurers.DefaultLoginPageConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter;
@@ -26,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * Explanation : 비밀번호 암호화 방식 지정 BCrypt 방식 <br/>
      * date : 2021-05-08 오전 12:35
-     * @author : wgPark
+     * @author : yjChoi
     */
     @Bean
     PasswordEncoder passwordEncoder()
@@ -37,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * Explanation : 보안 형식 지정 <br/>
      * date : 2021-05-08 오전 12:35
-     * @author : wgPark
+     * @author : yjChoi
     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -48,7 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * Explanation : authorizeRequests anyRequest 들어오는 요청을 전부 허용한다. <br/>
      * date : 2021-05-08 오전 12:36
-     * @author : wgPark
+     * @author : yjChoi
     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -60,7 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         login ->
                                 login.permitAll()
                 )
-                .logout(logout -> logout.permitAll())
+                .logout(logout -> logout.logoutSuccessUrl("/").permitAll())
                 ;
     }
 }

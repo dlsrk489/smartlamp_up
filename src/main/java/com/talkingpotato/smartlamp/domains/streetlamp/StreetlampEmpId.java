@@ -1,4 +1,4 @@
-package com.talkingpotato.smartlamp.domain.streetlamp;
+package com.talkingpotato.smartlamp.domains.streetlamp;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 /**
  * Explanation : 2개의 주키를 할당하기 위한 클래스 <br/>
  * date : 2021-05-08 오전 12:36
- * @author : wgPark
+ * @author : yjChoi
 */
 @Data
 @Embeddable
