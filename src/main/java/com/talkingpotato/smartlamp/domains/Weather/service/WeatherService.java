@@ -1,7 +1,7 @@
 package com.talkingpotato.smartlamp.domains.Weather.service;
 
 
-import com.talkingpotato.smartlamp.domains.Weather.controller.WeatherRepository;
+import com.talkingpotato.smartlamp.domains.Weather.domain.repository.WeatherRepository;
 import com.talkingpotato.smartlamp.domains.Weather.domain.WeatherEntity;
 import lombok.RequiredArgsConstructor;
 import org.jsoup.Jsoup;

@@ -1,4 +1,4 @@
-package com.talkingpotato.smartlamp.domains.Weather.controller;
+package com.talkingpotato.smartlamp.domains.Weather.domain.repository;
 
 import com.talkingpotato.smartlamp.domains.Weather.domain.WeatherEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
