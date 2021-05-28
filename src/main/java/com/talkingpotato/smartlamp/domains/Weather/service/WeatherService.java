@@ -73,6 +73,7 @@ public class WeatherService {
 
         return WeatherEntity.builder()
                 .gu(gu)
+                .date(LocalDateTime.now())
                 .weather(weather)
                 .temperature(temperature)
                 .build();
