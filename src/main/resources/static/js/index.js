@@ -30,7 +30,7 @@ function Init()
             const nth = this.children[0];
             nth.classList.add("pointup");
 
-            const newElement = document.createElement("DIV");
+            const newElement = document.createElement("canvas");
 
 
             $(this).append(newElement);
