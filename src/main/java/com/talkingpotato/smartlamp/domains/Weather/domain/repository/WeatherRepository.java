@@ -10,4 +10,6 @@ import java.util.Optional;
  */
 public interface WeatherRepository extends JpaRepository<WeatherEntity,Long> {
     Optional<WeatherEntity> findDistinctTopByGu(String gu);
+    Optional<WeatherEntity> findTopByGu(String gu);
+    Optional<WeatherEntity> findFirstByOrderByIdDesc();
 }

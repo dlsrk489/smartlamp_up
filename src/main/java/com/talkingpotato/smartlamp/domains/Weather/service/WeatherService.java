@@ -27,7 +27,7 @@ public class WeatherService {
 
     public WeatherEntity getWeather()
     {
-        return weatherRepository.findDistinctTopByGu("부산진구").orElseThrow(() -> new IllegalArgumentException("날씨정보가없습니다."));
+        return weatherRepository.findFirstByOrderByIdDesc().orElseThrow(() -> new IllegalArgumentException("날씨정보가없습니다."));
     }
     @Scheduled(cron="0 0/1 * * * *")
     public void saveWeather()
