@@ -17,7 +17,7 @@ public class CovidService {
 
     public CovidEntity getCovid()
     {
-        return covidRepository.findDistinctTopByGu("부산진구");
+        return covidRepository.findFirstByOrderByIdDesc();
     }
 
 }
