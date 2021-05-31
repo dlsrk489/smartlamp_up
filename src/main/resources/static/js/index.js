@@ -75,7 +75,7 @@ function Init()
             const nth = this.children[0];
             nth.classList.remove("pointup","pointshow")
 
-            $('.chartContainer').remove();
+            $('#chartContainer').remove();
         });
 
     }

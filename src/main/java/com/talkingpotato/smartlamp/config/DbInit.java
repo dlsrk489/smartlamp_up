@@ -20,7 +20,7 @@ public class DbInit implements InitializingBean {
     */
     @Override
     public void afterPropertiesSet() throws Exception {
-        if(!userService.findUser("potato").isPresent())
+        if(userService.findUser("potato").isEmpty())
         {
             UserEntity user = userService.save(UserEntity.builder()
                     .userEmail("potato")
@@ -29,7 +29,7 @@ public class DbInit implements InitializingBean {
                     .build());
             userService.addAuthority(user.getUserId(),"ROLE_ADMIN");
         }
-        if(!userService.findUser("sweet").isPresent())
+        if(userService.findUser("sweet").isEmpty())
         {
             UserEntity user = userService.save(UserEntity.builder()
                     .userEmail("sweet")
